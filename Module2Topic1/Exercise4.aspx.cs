@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Module1Exercise1
 {
@@ -12,6 +7,18 @@ namespace Module1Exercise1
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                string resultText = $"Email: {email.Text}<br/>" +
+                                    $"Age: {age.Text}<br/>" +
+                                    $"Full Name: {fullName.Text}";
+
+                result.Text = resultText;
+            }
         }
     }
 }
